@@ -1,0 +1,86 @@
+6)a)wc:-
+wc stands for word count. As the name implies, it is mainly used for counting purpose. It is used to find out number of lines, word count, byte and characters count in the files specified in the file arguments.
+syntax:- wc [OPTION]... [FILE]...
+1.  -w: This option prints the number of words present in a file.
+example:-
+abc.txt
+she loves singing.
+he loves painting.
+code:- $ wc -w abc.txt
+output:- 6 abc.txt
+example 2:-
+-m: Using -m option ‘wc’ command displays count of characters from a file.
+code:- wc -m abc.txt
+output:- 38 abc.txt
+
+b)cut:-
+The cut command in linux is a command for cutting out the sections from each line of files and writing the result to standard output. 
+syntax :- cut OPTION... [FILE]...
+example:-
+-b:- select for printing only the bytes in positions listed in Byte-list.
+abc.txt
+arun
+ajith
+delwin
+jai
+code:-$cut -b 1,2 abc.txt
+output:- ar
+aj
+de
+ja
+
+c)paste:-  used to merge lines of files.
+synatx:- paste [OPTION]... [FILES]...
+example:- The -s, --serial option tells paste to display the lines of one file at a time instead of one line from each file.
+$paste -s file1 file2
+abc.txt 
+mango
+apple
+banana
+price.txt
+80
+60
+50
+code:- $ paste -s abc.txt price.txt
+output:-
+mango	apple	banana	
+80	60	50
+
+7)a)head:-The 'head' command in Linux is used to display the first part of files.
+syntax:-$head [options] [file_name] .The 'head -c' command counts the number of bytes of a file.
+example:-
+Syntax:
+head -c <number> <file name>  
+$ head -c 15 abc.txt
+outputmango
+apple
+ban
+
+b)tail :-
+used to display the last ten lines of one or more files.
+syntax:- tail [OPTION]... [FILE]...
+example:-
+The '-n' option displays the specified number of lines.
+tail -n 2 abc.txt
+output:- banana
+
+c)grep:-
+used to search for lines matching a specified pattern and print the matching lines to standard output. 
+syntax:-grep [options] pattern [files]
+example:
+-c: Prints only a count of the lines that match the pattern.
+- grep -c a abc.txt
+output:-3
+
+d) expr:- evaluates a given expression and displays its corresponding output. 
+Syntax:- $expr expression
+example:- $ expr 14 + 5
+output:- 19
+
+
+
+
+
+
+
+
